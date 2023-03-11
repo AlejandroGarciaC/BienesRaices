@@ -1,0 +1,79 @@
+@include tablet {
+    .seccion-inferior{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+    }
+}
+
+.entrada-blog {
+
+    margin-bottom: 2rem;
+    @include tablet {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.texto-entrada {
+
+    h4 {
+        margin: 0;
+        margin-top: 2rem;
+        line-height: 1.4;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 15rem;
+            height: .5rem;
+            background-color: $verde;
+            margin-top: 1rem;
+        }
+    }
+
+    a {
+        color: $negro;
+    }
+   
+}
+
+.testimonial {
+    background-color: $verde;
+    padding: 2rem;
+    font-size: 2.4rem;
+    color: $blanco;
+    border-radius: 2rem;
+
+    blockquote {
+        padding-left: 5rem;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: '';
+            background-image: url('../img/comilla.svg');
+            background-repeat: no-repeat;
+            width: 6rem;
+            height: 8rem;
+            display: block;
+            left: -2rem;
+        }
+    }
+
+    p{
+        text-align: right;
+        color: $blanco;
+    }
+}
+
+.meta{
+    span{
+        color: $amarillo;
+    }
+}
